@@ -19,6 +19,7 @@ SRC_LST = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast \
 			ft_lstmap
 SRC_PRINTF = ft_printf_utils ft_printf 
 SRC_GNL = get_next_line_utils get_next_line
+SRC_ADD = ft_count_line
 
 # Adding the .c extension back to the file names
 SRC_IS := $(addsuffix .c, $(SRC_IS))
@@ -30,6 +31,7 @@ SRC_LST := $(addsuffix .c, $(SRC_LST))
 SRC_UTILS := $(addsuffix .c, $(SRC_UTILS))
 SRC_GNL := $(addsuffix .c, $(SRC_GNL))
 SRC_PRINTF := $(addsuffix .c, $(SRC_PRINTF))
+SRC_ADD := $(addsuffix .c, $(SRC_ADD))
 
 # Prefixing folder name to each file
 SRCS_IS = $(addprefix $(SRC_DIR)/ft_is/, $(SRC_IS))
@@ -40,9 +42,10 @@ SRCS_PUT = $(addprefix $(SRC_DIR)/ft_put/, $(SRC_PUT))
 SRCS_LST = $(addprefix $(SRC_DIR)/ft_lst/, $(SRC_LST))
 SRCS_PRINTF = $(addprefix $(SRC_DIR)/ft_printf/, $(SRC_PRINTF))
 SRCS_GNL = $(addprefix $(SRC_DIR)/ft_gnl/, $(SRC_GNL))
+SRCS_ADD = $(addprefix $(SRC_DIR)/ft_add/, $(SRC_ADD))
 
 # Merging all source files
-SRCS = $(SRCS_IS) $(SRCS_STR) $(SRCS_MEM) $(SRCS_TO) $(SRCS_PUT) $(SRCS_LST) $(SRCS_UTILS) $(SRCS_GNL) $(SRCS_PRINTF)
+SRCS = $(SRCS_IS) $(SRCS_STR) $(SRCS_MEM) $(SRCS_TO) $(SRCS_PUT) $(SRCS_LST) $(SRCS_UTILS) $(SRCS_GNL) $(SRCS_PRINTF) $(SRCS_ADD)
 OBJS = $(patsubst $(SRC_DIR)/%, $(OBJ_DIR)/%, $(SRCS:.c=.o))
 
 all: $(NAME)

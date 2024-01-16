@@ -6,11 +6,11 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:55:48 by abesneux          #+#    #+#             */
-/*   Updated: 2023/11/29 14:39:00 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/01/12 18:43:18 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 #include <stdlib.h>
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))

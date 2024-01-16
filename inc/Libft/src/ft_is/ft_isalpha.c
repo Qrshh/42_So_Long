@@ -6,12 +6,12 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 01:37:54 by marvin            #+#    #+#             */
-/*   Updated: 2023/11/29 14:38:19 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/01/12 18:42:48 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*DONE*/
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 
 int	ft_isalpha(int c)
 {

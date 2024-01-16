@@ -6,11 +6,11 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 01:31:04 by marvin            #+#    #+#             */
-/*   Updated: 2023/11/29 14:39:45 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/01/12 18:43:57 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

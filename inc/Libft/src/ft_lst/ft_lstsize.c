@@ -6,11 +6,11 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 21:37:40 by abesneux          #+#    #+#             */
-/*   Updated: 2023/11/29 14:39:07 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/01/12 18:43:23 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 
 int	ft_lstsize(t_list *lst)
 {

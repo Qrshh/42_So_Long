@@ -6,11 +6,11 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 16:23:42 by abesneux          #+#    #+#             */
-/*   Updated: 2023/11/29 14:40:02 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/01/12 18:44:14 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 
 /*char	*ft_strchr(const char *s, int c)
 {

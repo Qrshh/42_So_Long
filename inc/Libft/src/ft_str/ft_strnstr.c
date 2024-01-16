@@ -6,11 +6,11 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 14:09:32 by abesneux          #+#    #+#             */
-/*   Updated: 2023/11/29 14:40:40 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/01/12 18:44:42 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

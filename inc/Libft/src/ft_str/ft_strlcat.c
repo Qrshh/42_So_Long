@@ -6,11 +6,11 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:27:53 by abesneux          #+#    #+#             */
-/*   Updated: 2023/11/29 14:40:20 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/01/12 18:44:27 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "../../inc/libft.h"
 #include <stdio.h>
 
 size_t	ft_strlcat(char *dest, char *src, size_t size)
