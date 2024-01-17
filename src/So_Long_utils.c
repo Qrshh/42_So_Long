@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 16:45:48 by abesneux          #+#    #+#             */
-/*   Updated: 2024/01/16 23:21:22 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/01/17 12:34:10 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	select_image(lamap Map, TextureInfo *textureArray, int x, int y,
 	if (Map.mapp[y][x] == '1')
 		mlx_image_to_window(mlx, textureArray[0].image, x * TILE_SIZE, y
 			* TILE_SIZE);
-	if (Map.mapp[y][x] != '1')
+	if (Map.mapp[y][x] == '0' || Map.mapp[y][x] == 'D' || Map.mapp[y][x] == 'M' || Map.mapp[y][x] == 'P')
 		mlx_image_to_window(mlx, textureArray[1].image, x * TILE_SIZE, y
 			* TILE_SIZE);
 	if (Map.mapp[y][x] == 'D')
@@ -68,9 +68,5 @@ void	select_image(lamap Map, TextureInfo *textureArray, int x, int y,
 		mlx_image_to_window(mlx, textureArray[3].image, x * TILE_SIZE, y
 			* TILE_SIZE);
 	}
-    // if(Map.mapp[y][x] == 'P')
-    // {
-    //     mlx_image_to_window(mlx, textureArray[4].image, x * TILE_SIZE, y * TILE_SIZE);
-    // }
 }
 

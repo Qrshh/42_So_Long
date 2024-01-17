@@ -17,7 +17,8 @@ CFLAGS = -Wall -Wextra -Werror -g
 
 RM = rm -rf
 
-all : libmlx $(NAME)
+all : $(NAME)
+compil : libmlx
 libmlx:
 	@cmake $(LIBMLX) -B $(LIBMLX)/build && make -C $(LIBMLX)/build -j4
 
@@ -32,12 +33,14 @@ $(LIBFT):
 
 clean :
 	$(RM) $(OBJS)
-	@rm -rf $(LIBMLX)/build
+	@rm -rf
 	make clean -C inc/Libft
 
 fclean : clean
 	$(RM) $(NAME)
 	make fclean -C inc/Libft
+
+
 
 re : fclean all
 
