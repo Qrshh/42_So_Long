@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 18:59:36 by abesneux          #+#    #+#             */
-/*   Updated: 2024/01/22 23:43:48 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:55:07 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	main(void)
 	static t_mappy	sex = {0};
 	int				fd;
 
-	if (checkMap("maps/map1.ber") == 0)
+	if (check_map("maps/map1.ber") == 0)
 	{
 		sex.mlx = mlx_init(WIDTH, HEIGHT, "TEST", true);
 		if (!sex.mlx)
