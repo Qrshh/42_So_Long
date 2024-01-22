@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 09:11:41 by abesneux          #+#    #+#             */
-/*   Updated: 2024/01/12 18:24:38 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/01/19 01:16:58 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ char				*ft_strtrim(char const *s1, char const *set);
 void				ft_putnbr_fd(int n, int fd);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
+int					ft_strcmp(char *s1, char *s2);
 
 // BONUS
 t_list				*ft_lstnew(void *content);

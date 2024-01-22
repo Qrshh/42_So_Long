@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 16:45:48 by abesneux          #+#    #+#             */
-/*   Updated: 2024/01/17 12:34:10 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:44:15 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,43 +30,46 @@ int	ft_count_line_map(char *fichier)
 	return (i);
 }
 
-void	initializeTextures(mlx_t *mlx, TextureInfo *textureArray)
+void	initialize_textures(t_mappy *sex)
 {
 	int	i;
 
+	sex->texture_array[0].texture = mlx_load_png("assets/wall_1.png");
+	sex->texture_array[1].texture = mlx_load_png("assets/floor_6.png");
+	sex->texture_array[2].texture = mlx_load_png("assets/barrel.png");
+	sex->texture_array[3].texture = mlx_load_png("assets/goblin_f0.png");
+	sex->texture_array[4].texture = mlx_load_png("assets/knight.png");
+	sex->texture_array[5].texture = mlx_load_png("assets/potion_yellow.png");
+	sex->texture_array[6].texture = mlx_load_png("assets/exit.png");
 	i = 0;
-	textureArray[0].texture = mlx_load_png("assets/wall_1.png");
-	textureArray[1].texture = mlx_load_png("assets/floor_6.png");
-	textureArray[2].texture = mlx_load_png("assets/barrel.png");
-	textureArray[3].texture = mlx_load_png("assets/goblin_f0.png");
-    textureArray[4].texture = mlx_load_png("assets/knight.png");
-	while (i < 5)
+	while (i < 7)
 	{
-		textureArray[i].image = mlx_texture_to_image(mlx,
-				textureArray[i].texture);
-		mlx_delete_texture(textureArray[i].texture);
+		sex->texture_array[i].image = mlx_texture_to_image(sex->mlx,
+				sex->texture_array[i].texture);
+		mlx_delete_texture(sex->texture_array[i].texture);
 		i++;
 	}
 }
 
-void	select_image(lamap Map, TextureInfo *textureArray, int x, int y,
-		mlx_t *mlx)
+void	select_image(t_mappy *sex, int x, int y)
 {
-	if (Map.mapp[y][x] == '1')
-		mlx_image_to_window(mlx, textureArray[0].image, x * TILE_SIZE, y
-			* TILE_SIZE);
-	if (Map.mapp[y][x] == '0' || Map.mapp[y][x] == 'D' || Map.mapp[y][x] == 'M' || Map.mapp[y][x] == 'P')
-		mlx_image_to_window(mlx, textureArray[1].image, x * TILE_SIZE, y
-			* TILE_SIZE);
-	if (Map.mapp[y][x] == 'D')
-	{
-		mlx_image_to_window(mlx, textureArray[2].image, x * TILE_SIZE, y
-			* TILE_SIZE);
-	}
-	if (Map.mapp[y][x] == 'M')
-	{
-		mlx_image_to_window(mlx, textureArray[3].image, x * TILE_SIZE, y
-			* TILE_SIZE);
-	}
+	if (sex->map[y][x] == '1')
+		mlx_image_to_window(sex->mlx, sex->texture_array[0].image, x * TILE_SIZE,
+			y * TILE_SIZE);
+	if (sex->map[y][x] == '0' || sex->map[y][x] == 'D' || sex->map[y][x] == 'M'
+		|| sex->map[y][x] == 'P' || sex->map[y][x] == 'C')
+		mlx_image_to_window(sex->mlx, sex->texture_array[1].image, x * TILE_SIZE,
+			y * TILE_SIZE);
+	if (sex->map[y][x] == 'D')
+		mlx_image_to_window(sex->mlx, sex->texture_array[2].image, x * TILE_SIZE,
+			y * TILE_SIZE);
+	if (sex->map[y][x] == 'M')
+		mlx_image_to_window(sex->mlx, sex->texture_array[3].image, x * TILE_SIZE,
+			y * TILE_SIZE);
+	if (sex->map[y][x] == 'E')
+		mlx_image_to_window(sex->mlx, sex->texture_array[6].image, x * TILE_SIZE,
+			y * TILE_SIZE);
+	if (sex->map[y][x] == 'C')
+		mlx_image_to_window(sex->mlx, sex->texture_array[5].image, x * TILE_SIZE,
+			y * TILE_SIZE);
 }
-

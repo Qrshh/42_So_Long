@@ -7,7 +7,8 @@ HEADERS	:= -I inc -I $(LIBMLX)/include
 LIBS	:= $(LIBMLX)/build/libmlx42.a -ldl -lglfw -pthread -lm
 SRCS =		src/So_Long.c \
 		 	src/So_Long_utils.c \
-			src/personnage.c
+			src/personnage.c \
+			src/checkMap.c \
 
 OBJS = ${SRCS:.c=.o}
 

@@ -9,7 +9,7 @@ INC_DIR = inc
 SRC_IS = ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint
 SRC_STR = ft_strlen ft_strlcpy ft_strlcat ft_strchr ft_strrchr \
 			ft_strnstr ft_strncmp ft_substr ft_strjoin ft_strtrim \
-			ft_split ft_strmapi ft_striteri ft_strdup
+			ft_split ft_strmapi ft_striteri ft_strdup ft_strcmp
 SRC_MEM = ft_memset ft_bzero ft_memcpy ft_memmove ft_memchr \
 			ft_memcmp ft_calloc
 SRC_TO = ft_atoi ft_toupper ft_tolower ft_itoa
