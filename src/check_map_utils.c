@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   check_map_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 01:15:34 by abesneux          #+#    #+#             */
-/*   Updated: 2024/01/24 20:23:34 by abesneux         ###   ########.fr       */
+/*   Created: 2024/01/24 15:59:55 by abesneux          #+#    #+#             */
+/*   Updated: 2024/01/24 20:20:57 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/libft.h"
+#include "../inc/SOLONG.h"
 
-int	ft_strcmp(char *s1, char *s2)
+char	**tab_map(char *argv)
 {
-	int	i;
+	char	**tab;
+	char	*line;
+	int		i;
+	int		fd;
+	int		nb_line;
 
 	i = 0;
-	while (s1[i] && s2[i] && s1[i] == s2[i])
+	nb_line = ft_count_line_map(argv);
+	tab = malloc(sizeof(char *) * (nb_line + 1));
+	if (!tab)
+		exit_error("Erreur de malloc");
+	fd = open(argv, O_RDONLY);
+	while ((line = get_next_line(fd)))
+	{
+		if (i < nb_line)
+			line[ft_strlen(line) - 1] = '\0';
+		tab[i] = line;
 		i++;
-	return (s1[i] - s2[i]);
+	}
+	close(fd);
+	return (tab);
 }

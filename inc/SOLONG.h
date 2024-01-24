@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:01:57 by abesneux          #+#    #+#             */
-/*   Updated: 2024/01/22 23:43:16 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/01/24 23:08:59 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "Libft/inc/libft.h"
 # include "MLX42/include/MLX42/MLX42.h"
 # include <fcntl.h>
+# include <stdbool.h>
 # include <stdint.h>
 # include <stdio.h>
 # include <unistd.h>
@@ -36,12 +37,21 @@ typedef struct s_mappy
 	char			**map;
 	mlx_t			*mlx;
 	t_texture_info	texture_array[7];
+	bool			collected;
 }					t_mappy;
 
 int					ft_count_line_map(char *fichier);
 void				initialize_textures(t_mappy *map);
 void				select_image(t_mappy *map, int x, int y);
 void				ft_hook(void *param);
-int					check_map(char *filename);
+int					map_is_ber(char *filename);
+void				exit_error(char *msg);
+int					map_is_rectangle(char **tab_map);
+void				aff_map(t_mappy *sex, int fd, char *filename);
+void				exit_game(void *param);
+char				**tab_map(char *argv);
+int					check_map(char *filename, char **tab_map);
+int					is_valid(char **map, int x, int y, t_mappy *sex);
+void				delete_img_collected(t_mappy *sex);
 
 #endif

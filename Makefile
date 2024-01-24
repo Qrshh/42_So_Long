@@ -5,10 +5,12 @@ LIBMLX	= inc/MLX42
 
 HEADERS	:= -I inc -I $(LIBMLX)/include
 LIBS	:= $(LIBMLX)/build/libmlx42.a -ldl -lglfw -pthread -lm
-SRCS =		src/So_Long.c \
-		 	src/So_Long_utils.c \
-			src/personnage.c \
-			src/checkMap.c \
+SRCS =		src/solong.c \
+		 	src/solong_utils.c \
+			src/perso.c \
+			src/check_map.c \
+			src/create_map.c \
+			src/check_map_utils.c \
 
 OBJS = ${SRCS:.c=.o}
 
@@ -46,3 +48,5 @@ fclean : clean
 re : fclean all
 
 .PHONY: all, clean, fclean, re, libmlx
+
+.SILENT :
