@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 19:53:43 by abesneux          #+#    #+#             */
-/*   Updated: 2024/01/30 20:35:10 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/01 21:17:46 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ void	aff_map(t_mappy *sex, int fd, char *filename)
 	int	nb_line;
 
 	nb_line = ft_count_line_map(filename) + 1;
-	sex->map = calloc(1, (sizeof(char *) * nb_line));
+	sex->map = ft_calloc(1, (sizeof(char *) * nb_line));
 	parsing_map(sex, fd);
 }

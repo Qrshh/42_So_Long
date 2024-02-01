@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:59:55 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/01 01:21:58 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/01 21:32:04 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,16 @@ char	**tab_map(char *argv)
 	nb_line = ft_count_line_map(argv);
 	tab = ft_calloc(1, sizeof(char *) * (nb_line + 1));
 	if (!tab)
-		exit_error("Error \nMalloc error");
+		exit_error("Error \nMalloc error", NULL);
 	fd = open(argv, O_RDONLY);
 	line = get_next_line(fd);
 	while (line)
 	{
-		if (i < nb_line)
-			tab[i] = ft_strdup(line);
+		tab[i] = line;
 		line[ft_strlen(line) - 1] = '\0';
 		tab[i] = line;
 		i++;
-		free(line);
+		line = NULL;
 		line = get_next_line(fd);
 	}
 	close(fd);
@@ -67,14 +66,14 @@ void	wall_checker(char **tab)
 			while (tab[i][j])
 			{
 				if (tab[i][j] != '1')
-					exit_error("Error \nMap incorrect");
+					exit_error("Error \nMap isn't close", tab);
 				j++;
 			}
 		}
 		else
 		{
 			if (tab[i][0] != '1' || tab[i][ft_strlen(tab[i]) - 1] != '1')
-				exit_error("Error \nMap incorrect");
+				exit_error("Error \nMap isn't close", tab);
 		}
 		i++;
 	}

@@ -6,13 +6,12 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:01:57 by abesneux          #+#    #+#             */
-/*   Updated: 2024/01/30 20:10:26 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/01 21:05:00 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SOLONG_H
 # define SOLONG_H
-
 
 # include "Libft/inc/libft.h"
 # include "MLX42/include/MLX42/MLX42.h"
@@ -45,6 +44,7 @@ typedef struct s_mappy
 	int				mouvement_count;
 	int				player_x;
 	int				player_y;
+	char			*filename;
 }					t_mappy;
 
 int					ft_count_line_map(char *fichier);
@@ -52,11 +52,11 @@ void				initialize_textures(t_mappy *map);
 void				select_image(t_mappy *map, int x, int y);
 void				ft_hook(void *param);
 int					map_is_ber(char *filename);
-void				exit_error(char *msg);
+void				exit_error(char *msg, char **tab);
 int					map_is_rectangle(char **tab_map);
 void				aff_map(t_mappy *sex, int fd, char *filename);
 char				**tab_map(char *argv);
-int					check_map(char *filename, char **tab_map);
+int					check_map(t_mappy *all);
 int					is_valid(char **map, int x, int y, t_mappy *sex);
 void				delete_img_collected(t_mappy *sex);
 void				select_key(mlx_key_data_t press, int new_x, int new_y,

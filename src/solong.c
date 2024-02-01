@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 18:59:36 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/01 17:52:02 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/01 21:31:14 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	generate_window(char *filename, int fd)
 
 	sex.mlx = mlx_init(WIDTH, HEIGHT, "GAME", true);
 	if (!sex.mlx)
-		exit_error("Window's not opening");
+		exit_error("Window's not opening", NULL);
 	initialize_textures(&sex);
 	aff_map(&sex, fd, filename);
 	check_path(&sex);
@@ -44,27 +44,25 @@ void	generate_window(char *filename, int fd)
 int	main(int ac, char **av)
 {
 	int		fd;
-	char	*filename;
-	char	**tab;
+	static t_mappy all = {0};
 
-	tab = NULL;
 	if (ac == 2)
 	{
-		filename = av[1];
-		tab = tab_map(av[1]);
-		if (check_map(filename, tab) == 1)
+		all.filename = av[1];
+		all.map = tab_map(av[1]);
+		if (check_map(&all) == 1)
 		{
-			wall_checker(tab);
-			fd = open(filename, O_RDONLY);
-			generate_window(filename, fd);
+			wall_checker(all.map);
+			fd = open(all.filename, O_RDONLY);
+			generate_window(all.filename, fd);
 			close(fd);
 		}
 		else
-			exit_error("Map is not compliant");
+			exit_error("Map is not compliant", all.map);
 	}
 	else
-		exit_error("Arguments Problem");
-	if (tab)
-		free_map(tab);
+		exit_error("Arguments Problem", NULL);
+	if (all.map)
+		free_map(all.map);
 	return (0);
 }

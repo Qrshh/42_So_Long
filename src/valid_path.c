@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 18:56:44 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/01 01:05:49 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/01 21:04:52 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	check_path(t_mappy *game)
 
 	flood_map = duplicate_map(game->map);
 	if (!flood_map)
-		exit_error("Cloning map error");
+		exit_error("Cloning map error", NULL);
 	x = game->player_x;
 	y = game->player_y;
 	requirements[0] = 0;
@@ -86,8 +86,8 @@ int	check_path(t_mappy *game)
 	flood_fill(flood_map, x, y, requirements);
 	ft_free_tab(flood_map, -1);
 	if (!requirements[0])
-		exit_error("No game issue founded");
+		exit_error("No game issue founded", NULL);
 	if (requirements[1] != game->total_collectible)
-		exit_error("Not enough collectible");
+		exit_error("Not enough collectible", NULL);
 	return (0);
 }
