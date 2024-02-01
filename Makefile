@@ -1,4 +1,4 @@
-NAME = JEU
+NAME = so_long
 
 LIBFT 	= inc/Libft/libft.a
 LIBMLX	= inc/MLX42
@@ -11,6 +11,7 @@ SRCS =		src/solong.c \
 			src/check_map.c \
 			src/create_map.c \
 			src/check_map_utils.c \
+			src/valid_path.c \
 
 OBJS = ${SRCS:.c=.o}
 
@@ -20,7 +21,7 @@ CFLAGS = -Wall -Wextra -Werror -g
 
 RM = rm -rf
 
-all : $(NAME)
+all : libmlx $(NAME)
 compil : libmlx
 libmlx:
 	@cmake $(LIBMLX) -B $(LIBMLX)/build && make -C $(LIBMLX)/build -j4
@@ -36,17 +37,15 @@ $(LIBFT):
 
 clean :
 	$(RM) $(OBJS)
-	@rm -rf
 	make clean -C inc/Libft
 
 fclean : clean
 	$(RM) $(NAME)
 	make fclean -C inc/Libft
-
-
+	rm -f inc/MLX42/build/CMakeCache.txt
 
 re : fclean all
 
 .PHONY: all, clean, fclean, re, libmlx
 
-.SILENT :
+.SILENT:

@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 16:45:48 by abesneux          #+#    #+#             */
-/*   Updated: 2024/01/24 20:20:44 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/01/30 20:10:15 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,25 @@
 
 int	ft_count_line_map(char *fichier)
 {
-	int	fd;
-	int	i;
+	int		fd;
+	int		i;
+	char	*line;
 
 	fd = open(fichier, O_RDONLY);
 	if (fd == -1)
 	{
-		exit_error("Erreur d'ouverture du fichier contenant la map");
+		exit_error("Error occurs when opening the file");
 		return (-1);
 	}
 	i = 0;
-	while (get_next_line(fd) != NULL)
+	while (1)
+	{
+		line = get_next_line(fd);
+		if (line == NULL)
+			break ;
 		i++;
+		free(line);
+	}
 	close(fd);
 	return (i);
 }
@@ -72,8 +79,11 @@ void	select_image(t_mappy *sex, int x, int y)
 		mlx_image_to_window(sex->mlx, sex->texture_array[6].image, x
 			* TILE_SIZE, y * TILE_SIZE);
 	if (sex->map[y][x] == 'C')
+	{
 		mlx_image_to_window(sex->mlx, sex->texture_array[5].image, x
 			* TILE_SIZE, y * TILE_SIZE);
+		sex->total_collectible++;
+	}
 }
 
 void	exit_error(char *msg)
@@ -81,4 +91,17 @@ void	exit_error(char *msg)
 	write(STDERR_FILENO, msg, ft_strlen(msg));
 	write(STDERR_FILENO, "\n", 1);
 	exit(EXIT_FAILURE);
+}
+
+void	free_map(char **tab_map)
+{
+	int	i;
+
+	i = 0;
+	while (tab_map[i])
+	{
+		free(tab_map[i]);
+		i++;
+	}
+	free(tab_map);
 }
