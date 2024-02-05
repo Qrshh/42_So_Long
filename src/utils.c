@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 20:36:36 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/03 01:43:13 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/05 22:15:44 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,25 @@ void	exit_error(char *msg, char **tab)
 	write(STDERR_FILENO, msg, ft_strlen(msg));
 	write(STDERR_FILENO, "\n", 1);
 	exit(EXIT_FAILURE);
+}
+
+void	event_listener(mlx_key_data_t press, void *param)
+{
+	t_game	*all;
+
+	all = (t_game *)param;
+	select_key(press, all);
+	delete_img_collected(all);
+}
+
+void	select_key(mlx_key_data_t press, t_game *all)
+{
+	if (press.key == MLX_KEY_D && press.action == MLX_RELEASE)
+		right(all);
+	else if (press.key == MLX_KEY_A && press.action == MLX_RELEASE)
+		left(all);
+	else if (press.key == MLX_KEY_W && press.action == MLX_RELEASE)
+		up(all);
+	else if (press.key == MLX_KEY_S && press.action == MLX_RELEASE)
+		down(all);
 }

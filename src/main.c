@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 20:30:52 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/03 01:43:25 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/05 23:24:11 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,11 @@ int	main(int ac, char **av)
 	all.map.fd = open(av[1], O_RDONLY);
 	init_map(&all);
 	all.map.mlx = mlx_init(WIDTH, HEIGHT, "so_long", true);
+	asset_init(&all);
+	display_assets(&all);
+	check_map(&all);
 	mlx_loop_hook(all.map.mlx, check_key, &all);
+	mlx_key_hook(all.map.mlx, event_listener, &all);
 	mlx_loop(all.map.mlx);
 	mlx_terminate(all.map.mlx);
 	free_map(all.map.matrix);
@@ -40,6 +44,8 @@ void	init_var(t_game *all)
 	all->player.player_mouv = 0;
 	all->player.x = 0;
 	all->player.y = 0;
+	all->map.items_collected = 0;
+	all->map.info.collectibles = 0;
 }
 
 void	check_key(void *param)

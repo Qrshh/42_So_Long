@@ -6,7 +6,7 @@
 #    By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/03 01:14:40 by abesneux          #+#    #+#              #
-#    Updated: 2024/02/03 01:41:21 by abesneux         ###   ########.fr        #
+#    Updated: 2024/02/05 23:18:07 by abesneux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,14 +28,14 @@ MLX_DIR = $(INCLUDES)MLX42/
 MLX 	= $(MLX_DIR)build/libmlx42.a $(PRFLAGS)
 
 MAP_DIR  = map/
-MAP      = init_map utils_map
+MAP      = init_map utils_map assets_map display_map display_map_utils control_map
 
-# PARSING_DIR = player/
-# PARSING     = 
+PLAYER_DIR = player/
+PLAYER    = utils_player player
 
 SRC_FILES  += main utils
 SRC_FILES  += $(addprefix $(MAP_DIR), $(MAP))
-# SRC_FILES  += $(addprefix $(PLAYER_DIR), $(PLAYER))
+SRC_FILES  += $(addprefix $(PLAYER_DIR), $(PLAYER))
 
 SRC         = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJ         = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
@@ -63,7 +63,7 @@ $(OBJ_DIR)%.o:	$(SRC_DIR)%.c | $(OBJ_CACHE)
 $(OBJ_CACHE):
 					@mkdir -p $(OBJ_DIR)
 					@mkdir -p $(OBJ_DIR)$(MAP_DIR)
-# @mkdir -p $(OBJ_DIR)$(PLAYER_DIR)
+					@mkdir -p $(OBJ_DIR)$(PLAYER_DIR)
 
 clean:
 					@make clean -C $(LIBFT_DIR)
