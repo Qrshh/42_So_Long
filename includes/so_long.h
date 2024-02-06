@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:01:57 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/05 23:17:32 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/06 00:10:23 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ typedef struct s_info
 	int				floor;
 	int				collectibles;
 	int				wall;
+	int				exit;
+	int hero;
 
 }					t_info;
 

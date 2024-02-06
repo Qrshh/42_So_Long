@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:01:55 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/05 22:57:06 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/06 00:59:10 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,11 @@
 void	image_select(t_game *all, int x, int y)
 {
 	if (all->map.matrix[y][x] == '0')
-		display_floor(all, x, y);
+		display_floor(all, x, y);  
 	else if (all->map.matrix[y][x] == '1')
 		display_wall(all, x, y);
 	else if (all->map.matrix[y][x] == 'C')
-    {
         display_collectible(all, x, y);
-        all->map.info.collectibles++;
-    }
 	else if (all->map.matrix[y][x] == 'E')
 		display_door(all, x, y);
 }
@@ -31,8 +28,8 @@ void	display_assets(t_game *all)
 {
 	int	x;
 	int	y;
-	int	check_x;
-	int	check_y;
+	int check_x;
+	int check_y;
 
 	y = 0;
 	while (y < all->map.map_height)
@@ -40,9 +37,8 @@ void	display_assets(t_game *all)
 		x = 0;
 		while (x < all->map.map_width)
 		{
-			if (all->map.matrix[y][x] != 'P')
-				image_select(all, x, y);
-			else
+			image_select(all, x, y);
+			if (all->map.matrix[y][x] == 'P')
 			{
 				check_x = x;
 				check_y = y;
@@ -51,7 +47,8 @@ void	display_assets(t_game *all)
 		}
 		y++;
 	}
-	display_hero(all, check_x, check_y);
+	if(check_x != 0 && check_y != 0)
+		display_hero(all, check_x, check_y);
 }
 
 void	delete_img_collected(t_game *all)

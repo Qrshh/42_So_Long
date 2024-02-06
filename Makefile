@@ -6,7 +6,7 @@
 #    By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/03 01:14:40 by abesneux          #+#    #+#              #
-#    Updated: 2024/02/05 23:18:07 by abesneux         ###   ########.fr        #
+#    Updated: 2024/02/06 01:00:03 by abesneux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ MLX_DIR = $(INCLUDES)MLX42/
 MLX 	= $(MLX_DIR)build/libmlx42.a $(PRFLAGS)
 
 MAP_DIR  = map/
-MAP      = init_map utils_map assets_map display_map display_map_utils control_map
+MAP      = init_map utils_map assets_map display_map display_map_utils
 
 PLAYER_DIR = player/
 PLAYER    = utils_player player
