@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 20:36:36 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/05 22:15:44 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/07 22:36:07 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,9 @@ void	select_key(mlx_key_data_t press, t_game *all)
 		up(all);
 	else if (press.key == MLX_KEY_S && press.action == MLX_RELEASE)
 		down(all);
+}
+
+void	destroy_window(t_game *all)
+{
+	mlx_terminate(all->map.mlx);
 }

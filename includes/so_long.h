@@ -6,12 +6,12 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:01:57 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/06 00:10:23 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/07 21:48:56 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SOLONG_H
-# define SOLONG_H
+#ifndef SO_LONG_H
+# define SO_LONG_H
 
 # include "Libft/inc/libft.h"
 # include "MLX42/include/MLX42/MLX42.h"
@@ -38,7 +38,7 @@ typedef struct s_info
 	int				collectibles;
 	int				wall;
 	int				exit;
-	int hero;
+	int				hero;
 
 }					t_info;
 
@@ -99,6 +99,7 @@ void				free_map(char **tab_map);
 void				event_listener(mlx_key_data_t press, void *param);
 void				select_key(mlx_key_data_t press, t_game *all);
 void				delete_img_collected(t_game *all);
+void				destroy_window(t_game *all);
 
 // PLAYER :
 void				check_key(void *param);
@@ -110,6 +111,11 @@ void				left(t_game *all);
 void				right(t_game *all);
 
 // MAP CHECKERS
-void				check_map(t_game *all);
+int					check_map(t_game *all);
+int					check_shape(t_game *all);
+int					is_closed(t_map map);
+
+// MAP CHECKERS UTILS
+int					count_tab_line(char **tab);
 
 #endif

@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_map.c                                        :+:      :+:    :+:   */
+/*   control_map_utils.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/03 01:07:48 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/07 21:46:29 by abesneux         ###   ########.fr       */
+/*   Created: 2024/02/06 23:54:42 by abesneux          #+#    #+#             */
+/*   Updated: 2024/02/07 21:46:11 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	len_map(char *str)
+int	count_tab_line(char **tab)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\n')
+	while (tab[i])
 		i++;
 	return (i);
 }

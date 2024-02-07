@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 20:30:52 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/06 01:00:20 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/07 23:05:57 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ int	main(int ac, char **av)
 	all.map.mlx = mlx_init(WIDTH, HEIGHT, "so_long", true);
 	asset_init(&all);
 	display_assets(&all);
-	// check_map(&all);
+	check_map(&all);
 	mlx_loop_hook(all.map.mlx, check_key, &all);
 	mlx_key_hook(all.map.mlx, event_listener, &all);
 	mlx_loop(all.map.mlx);
-	mlx_terminate(all.map.mlx);
+	destroy_window(&all);
 	free_map(all.map.matrix);
 	return (0);
 }
@@ -66,5 +66,5 @@ static void	handler_error(int ac, char **av)
 	if (ac != 2)
 		exit_error("Args Problem", NULL);
 	if (ft_strnstr(av[1], ".ber", ft_strlen(av[1])) == NULL)
-		exit_error("Wrong extension for map", NULL);
+		exit_error("Error \nWrong extension for map", NULL);
 }

@@ -6,7 +6,7 @@
 #    By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/03 01:14:40 by abesneux          #+#    #+#              #
-#    Updated: 2024/02/06 01:00:03 by abesneux         ###   ########.fr        #
+#    Updated: 2024/02/07 22:32:54 by abesneux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRC_DIR     = src/
 OBJ_DIR     = obj/
 
 CC          = gcc
-CFLAGS      = -Wall -Wextra -Werror -g -g3
+CFLAGS      = -Wall -Wextra -Werror -g
 PRFLAGS     = -ldl -lglfw -pthread -lm
 RM          = rm -rf
 
@@ -28,7 +28,7 @@ MLX_DIR = $(INCLUDES)MLX42/
 MLX 	= $(MLX_DIR)build/libmlx42.a $(PRFLAGS)
 
 MAP_DIR  = map/
-MAP      = init_map utils_map assets_map display_map display_map_utils
+MAP      = init_map utils_map assets_map display_map display_map_utils control_map control_map_utils
 
 PLAYER_DIR = player/
 PLAYER    = utils_player player

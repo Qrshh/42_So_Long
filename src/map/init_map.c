@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 23:17:21 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/06 00:57:40 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/07 22:57:32 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	init_map(t_game *all)
 
 	i = 0;
 	gnl = get_next_line(all->map.fd);
-	all->map.matrix = ft_calloc(1, sizeof(char *) * len_map(gnl));
+	all->map.matrix = ft_calloc(1, sizeof(char *) * 9999);
 	all->map.map_width = len_map(gnl);
 	while (gnl != NULL)
 	{
