@@ -6,7 +6,7 @@
 #    By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/03 01:14:40 by abesneux          #+#    #+#              #
-#    Updated: 2024/02/07 22:32:54 by abesneux         ###   ########.fr        #
+#    Updated: 2024/02/08 21:59:36 by abesneux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ MLX_DIR = $(INCLUDES)MLX42/
 MLX 	= $(MLX_DIR)build/libmlx42.a $(PRFLAGS)
 
 MAP_DIR  = map/
-MAP      = init_map utils_map assets_map display_map display_map_utils control_map control_map_utils
+MAP      = init_map utils_map assets_map display_map display_map_utils control_map control_map_utils check_path
 
 PLAYER_DIR = player/
 PLAYER    = utils_player player
@@ -50,7 +50,7 @@ $(LIBFT):
 	@make -C $(LIBFT_DIR) CFLAGS+=$(LIBFT_CFLAGS)
 
 $(MLX):
-	@make -C $(MLX_DIR)/build
+	@make -C $(MLX_DIR)build 
 
 $(NAME): 		$(OBJ)
 					$(CC) $(CFLAGS) $(OBJ) $(LIBFT) $(MLX) -o $(NAME)
@@ -75,6 +75,7 @@ fclean: 		clean
 					@make fclean -C $(LIBFT_DIR)
 					$(RM) $(NAME)
 					@echo "so_long and libs executable files cleaned!"
+					rm -f $(MLX_DIR)build/CMakeCache.txt
 
 re: 			fclean all
 					@echo "Cleaned and rebuilt everything for so_long!"

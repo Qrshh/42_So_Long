@@ -70,15 +70,15 @@ iostream
 lodepng.h
 ../include/lodepng/lodepng.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/build/mlx_frag_shader.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/build/mlx_frag_shader.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/build/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/build/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/build/mlx_vert_shader.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/build/mlx_vert_shader.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/build/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/build/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/lib/glad/glad.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/lib/glad/glad.c
 stdio.h
 -
 stdlib.h
@@ -94,9 +94,9 @@ winapifamily.h
 dlfcn.h
 -
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/lib/png/lodepng.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/lib/png/lodepng.c
 lodepng/lodepng.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/lib/png/lodepng/lodepng.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/lib/png/lodepng/lodepng.h
 limits.h
 -
 stdio.h
@@ -104,81 +104,81 @@ stdio.h
 stdlib.h
 -
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/font/font.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/font/font.h
 stdint.h
 -
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/font/mlx_font.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/font/mlx_font.c
 font.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/font/font.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/font/font.h
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/font/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/font/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/mlx_cursor.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/mlx_cursor.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/mlx_exit.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/mlx_exit.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/mlx_images.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/mlx_images.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/mlx_init.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/mlx_init.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/mlx_keys.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/mlx_keys.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/mlx_loop.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/mlx_loop.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/mlx_monitor.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/mlx_monitor.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/mlx_mouse.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/mlx_mouse.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/mlx_put_pixel.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/mlx_put_pixel.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/mlx_window.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/mlx_window.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/textures/mlx_png.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/textures/mlx_png.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/textures/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/textures/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/textures/mlx_texture.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/textures/mlx_texture.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/textures/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/textures/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/textures/mlx_xpm42.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/textures/mlx_xpm42.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/textures/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/textures/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/utils/mlx_compare.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/utils/mlx_compare.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/utils/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/utils/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/utils/mlx_error.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/utils/mlx_error.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/utils/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/utils/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/utils/mlx_list.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/utils/mlx_list.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/utils/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/utils/MLX42/MLX42_Int.h
 
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/utils/mlx_utils.c
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/utils/mlx_utils.c
 MLX42/MLX42_Int.h
-/home/abesneux/Desktop/retry/so_long/includes/MLX42/src/utils/MLX42/MLX42_Int.h
+/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/src/utils/MLX42/MLX42_Int.h
 

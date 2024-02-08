@@ -6,5 +6,5 @@ C_FLAGS = -fPIC   -D LODEPNG_NO_COMPILE_ENCODER -D LODEPNG_NO_COMPILE_ANCILLARY_
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/abesneux/Desktop/retry/so_long/includes/MLX42/include 
+C_INCLUDES = -I/home/abesneux/Desktop/Cursus/So_long/includes/MLX42/include 
 

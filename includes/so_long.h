@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 19:01:57 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/07 21:48:56 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/08 21:27:25 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,8 @@ void				right(t_game *all);
 // MAP CHECKERS
 int					check_map(t_game *all);
 int					check_shape(t_game *all);
-int					is_closed(t_map map);
+int					is_closed(t_game *all);
+int					check_path(t_game *all);
 
 // MAP CHECKERS UTILS
 int					count_tab_line(char **tab);

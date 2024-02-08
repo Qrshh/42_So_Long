@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 20:30:52 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/07 23:05:57 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/08 21:57:49 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,14 @@ int	main(int ac, char **av)
 	handler_error(ac, av);
 	init_var(&all);
 	all.map.fd = open(av[1], O_RDONLY);
+	if (all.map.fd == -1)
+		exit_error("Fichier inexistant", NULL);
 	init_map(&all);
 	all.map.mlx = mlx_init(WIDTH, HEIGHT, "so_long", true);
 	asset_init(&all);
 	display_assets(&all);
 	check_map(&all);
+	check_path(&all);
 	mlx_loop_hook(all.map.mlx, check_key, &all);
 	mlx_key_hook(all.map.mlx, event_listener, &all);
 	mlx_loop(all.map.mlx);

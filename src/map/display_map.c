@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:01:55 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/07 23:04:23 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/08 21:58:13 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	image_select(t_game *all, int x, int y)
 			display_door(all, x, y);
 	}
 }
+
 void	display_assets(t_game *all)
 {
 	int	x;

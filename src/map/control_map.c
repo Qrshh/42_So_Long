@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 21:27:08 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/07 22:36:48 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/02/08 21:58:31 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,29 +54,36 @@ int	check_shape(t_game *all)
 	return (1);
 }
 
-int	is_closed(t_map map)
+int	is_closed(t_game *all)
 {
 	int	i;
 
 	i = -1;
-	while (++i < map.map_height)
+	while (++i < all->map.map_height)
 	{
-		if (map.matrix[i][0] != '1' || map.matrix[i][map.map_width - 1] != '1')
-			exit_error("Error \nMap isn't close", map.matrix);
+		if (all->map.matrix[i][0] != '1'
+			|| all->map.matrix[i][all->map.map_width - 1] != '1')
+		{
+			destroy_window(all);
+			exit_error("Error \nMap isn't close", all->map.matrix);
+		}
 	}
 	i = -1;
-	while (++i < map.map_width)
+	while (++i < all->map.map_width)
 	{
-		if (map.matrix[0][i] != '1' || map.matrix[map.map_height - 1][i] != '1')
-			exit_error("Error \nMap isn't close2", map.matrix);
+		if (all->map.matrix[0][i] != '1' || all->map.matrix[all->map.map_height
+			- 1][i] != '1')
+		{
+			destroy_window(all);
+			exit_error("Error \nMap isn't close2", all->map.matrix);
+		}
 	}
 	return (1);
 }
 
 int	check_map(t_game *all)
 {
-	if (check_shape(all) == 1 && is_closed(all->map) == 1
-		&& check_content(all) == 1)
+	if (check_shape(all) && is_closed(all) && check_content(all))
 		return (1);
 	free_map(all->map.matrix);
 	return (0);
